@@ -17,16 +17,16 @@ public class Test {
 		Transaction transaction = session.beginTransaction();
 		
 		Employee emp = new Employee();
-		emp.setEno(1);
+		emp.setEno(4);
 		emp.setEname("Tofique");
 		emp.setEsal(19500);
 		emp.setEaddr("Indore");
 		
 		int eno = (Integer)session.save(emp);
-		System.out.println(eno);
+//		System.out.println(eno);
+		//session.persist(emp);
 		transaction.commit();
 		session.close();
-		sessionFactory.close();
 		
 		
 		
